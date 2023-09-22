@@ -1,7 +1,10 @@
 from django.urls import path, include
-from .views import lessons_list, product_lessons_list, statistic
+
 from rest_framework.routers import SimpleRouter
+
+from .views import lessons_list, product_lessons_list, statistic
 from .views import ProductViewset, AccessViewset, LessonViewset, UsersViewset
+
 
 router = SimpleRouter()
 router.register('products', ProductViewset, basename='products')
